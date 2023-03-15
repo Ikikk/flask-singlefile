@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% block title %}Tambah List{% endblock %} {% block content %}
+<form action="/lists/post" method=post>
+    <div class="mb-13 mt-3">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" class="form-control" placeholder="Title" name="title" required autofocus>
+    </div>
+    <div class="mb-3">
+        <label for="tag" class="form-label">Tag:</label>
+        <input type="number" class="form-control" placeholder="Tag" name="tag" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <input type="text" class="form-control" placeholder="Decription" name="description" required>
+    </div>
+    <div class="mb-3">
+        <label for="due_date" class="form-label">Due Date:</label>
+        <input type="date" class="form-control" placeholder="Due_date" name="due_date" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

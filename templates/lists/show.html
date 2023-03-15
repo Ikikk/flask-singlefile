@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block title %} To Do List {% endblock %}
+
+<!-- Replacement for Content -->
+{% block content %}
+<h3 class="one">To Do List</h3>
+<tbody>
+    <ul>
+        <li>Title : {{ todo[1] }}</li>
+        <li>Tag : {{ todo[2] }}</li>
+        <li> Description : {{ todo[3] }}</li>
+        <li>Due Date : {{ todo[4] }}</li>
+        <a href="/lists/{{todo[0]}}/edit" class="btn btn-success btn-sm">Edit</a>
+        <a href="/lists/{{todo[0]}}/delete" class="btn btn-success btn-sm" onclick="return confirm('Are you sure you want to delete?');">Delete</a>
+    </ul>
+</tbody>
+</table>
+{% endblock %}
